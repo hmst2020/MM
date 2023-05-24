@@ -20,12 +20,26 @@
   
           [實例四]健康照護費用迴歸線與預測。
   
-第2章  資料視覺化(Data Visualization)
+第2章  矩陣
 
-          [實例一]南丁格爾的玫瑰圖( Florence Nightingale’s Rose Diagram)
-    
-          [實例二]加拿大公職人員的語言能力(linguistics proficiency)百分比
+       第1節  矩陣定義與基本運算
+
+          [實例一]Acrosonic公司五月時的藍芽喇叭生產資料之表示及彙總
           
-          [實例三]1986年挑戰者號(Challenger) :災難檢討與有助於決策的事件散布圖的擬合曲線(fitted curve)
+       第2節  矩陣應用於密碼學(Cryptography)
+       
+          [實例二]求A的反矩陣(inverse of the matrix)
           
-          [實例四]2020 年Coronavirus 疫情地圖
+          [實例三]文字加、解密
+          
+       第3節  矩陣應用於經濟學: Leontief模式 
+       
+          [實例四]使用封閉型Leontief模式決定相關收入
+          
+          [實例五]另一種應用為使用開放型Leontief模式，滿足未來的生產量
+          
+          [實例六]消費者需求滿足及生產投入
+          
+       第4節  矩陣應用於最小平方法
+       
+          [實例七]以矩陣求解美國健康照護費用的線性函數
