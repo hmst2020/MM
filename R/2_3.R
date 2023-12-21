@@ -1,28 +1,24 @@
 ############ 轉碼加密(encode) ##################
 target.str <- "SEPTEMBER IS OKAY" # 加密目標字串
-(A <- matrix(        # 使用內建函式建構3x3的加密矩陣物件
-  data=c(1,0,0, 
-         3,1,5,
-         -2,0,1),
-  nrow = 3,
-  byrow=TRUE))
+(A <- rbind(        # 使用內建函式rbind建構3x3的加密矩陣物件
+  c(1,0,0), 
+  c(3,1,5),
+  c(-2,0,1)))
 (dim.A <- ncol(A))   # A矩陣行數
 (str.a <- gsub(      # 去除字串中空白字元
   pattern=" ", replacement="",  #以空字串代替空白字元
   x= target.str))    # 字串對象
-
 (sec.pos <- seq(       # dim.A個字母一組位置
   1,                   # 啟始位置
   nchar(str.a),        # str.a 字串長度(byte數)
-  by=dim.A             # 每隔dim.A個數
-))
+  by=dim.A))             # 每隔dim.A個數
 (str.vector <-  # 將原自串str.a依dim.A個字元切割
-  sapply(  # 使用內建sapply函式執行自訂之匿名函式function(pos)
-    X=sec.pos, # 依上述sec.pos切割位置function(pos)的傳入參數
-    FUN=function(pos) {     # 匿名函式
-      substr(str.a, pos, pos+dim.A-1) # 擷取str.a dim.A個字元
-    }
-))
+    sapply(      # 使用內建sapply函式執行自訂之匿名函式function(pos)
+      X=sec.pos, # 依上述sec.pos切割位置function(pos)的傳入參數
+      FUN=function(pos) {     # 匿名函式
+        substr(str.a, pos, pos+dim.A-1) # 擷取str.a dim.A個字元
+      }
+    ))
 encode.f<- function(data){ # 自訂轉碼加密函式 參數data為目標字串
   B<- matrix(              # 目標字串之對應數字 dim.A x 1矩陣
     data= match(   # 使用match函式傳回各字母對應之位置數字
