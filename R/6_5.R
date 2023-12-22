@@ -41,7 +41,7 @@ s.f <- function(s,rt,p,size){ # 自訂一ggplot 疊加線圖函式
         list(p=p,rt = rt), # 給予p(本金)及rt(利率)引數
       mapping=aes(   # 線圖顏色及圖例不同線圖的文字標示
         colour = as.character(rt)), 
-      size = size  # 線圖粗細
+      linewidth = size  # 線圖粗細
     )
   return(s)
 }
