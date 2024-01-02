@@ -96,7 +96,7 @@ for (i in 0:nvar){    # 預測因子數的所有組合
     cv.value<-CV(fit)   # 交叉驗證擬合模型
     acc<-accuracy(fit)  # 準確性指標
     mdls[dfnr,'CV']<-cv.value['CV']   # 交叉驗證誤差估計值
-    AIC<-log(SSE/n)*n+2*(q+1)  # 赤池訊息準則
+    AIC<-log(SSE/n)*n+2*(q)  # 赤池訊息準則
     mdls[dfnr,'AIC']<-AIC      # 紀錄赤池訊息準則
     #mdls[dfnr,'AIC']<-round(cv.value['AIC'],2) # 赤池訊息準則
     mdls[dfnr,'AICc']<-round(cv.value['AICc'],2) # 修正赤池訊息準則
