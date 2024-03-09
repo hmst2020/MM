@@ -2,7 +2,7 @@ load(file='data/T102.rds')    # 載入本例資料物件
 library(fpp2)
 alpha<-0.3          # 平滑參數值
 print(fcst <- ses(  # 簡單指數平滑模式預測
-  d.ts,             # 本例表10-1的時間序列物件
+  d.ts,             # 本例表9-1的時間序列物件
   alpha=alpha,      # 指定alpha值
   h=3,              # 預測期數
   initial='simple'))   # 簡單初始模式

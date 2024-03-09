@@ -3,7 +3,7 @@ weight<-c(0.1,0.2,0.3,0.4)    # 4期的加權配比
 library(fpp2)  # 載入fpp2套件
 library(TTR)    # 載入TTR套件
 print(wma.4<-WMA(     # 計算每4期加權移動平均並列印
-  data,               # 本例表10-1的vector 物件
+  data,               # 本例表9-1的vector 物件
   n=4,                # 取4期(含當期)予以加權
   wts=weight))        # n期的加權配比
 print(fit<-           # 每期預測(擬合)值等於前4期加權移動平均
